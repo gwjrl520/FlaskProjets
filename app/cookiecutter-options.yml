@@ -1,0 +1,9 @@
+default_context:
+    project_name: "app"
+    app_name: "app"
+    python_version: "3.8"
+    admin_user_username: "gL"
+    admin_user_email: "admin@mail.com"
+    admin_user_password: "admin"
+    use_celery: "no"
+    wsgi_server: "none"
