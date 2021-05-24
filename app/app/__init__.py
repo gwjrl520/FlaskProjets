@@ -1,9 +1,10 @@
 from flask import Flask
-from app import api
-from extensions import apispec
-from extensions import db
-from extensions import migrate
-from config import config_map
+
+from commons.settings.extensions import apispec
+from commons.settings.extensions import db
+from commons.settings.extensions import migrate
+from commons.settings.config import config_map
+from app.resources import register_blueprints
 
 
 def create_app(config_name):
@@ -42,8 +43,3 @@ def configure_apispec(app):
             }
         },
     )
-
-
-def register_blueprints(app):
-    """register all blueprints for application"""
-    app.register_blueprint(api.views.blueprint)

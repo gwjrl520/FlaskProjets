@@ -1,10 +1,7 @@
-from flask import request
 from flask_restful import Resource
 from flask_jwt_extended import jwt_required
-# from app.api.schemas import UserSchema
-from app.models import User
-from extensions import db
-from app.commons.pagination import paginate
+from commons.models.user import User
+from commons.settings.extensions import db
 
 
 class UserResource(Resource):
@@ -80,19 +77,9 @@ class UserResource(Resource):
     method_decorators = [jwt_required()]
 
     def get(self, user_id):
-        # schema = UserSchema()
-        # user = User.query.get_or_404(user_id)
-        # return {"user": schema.dump(user)}
         pass
 
     def put(self, user_id):
-        # schema = UserSchema(partial=True)
-        # user = User.query.get_or_404(user_id)
-        # user = schema.load(request.json, instance=user)
-        #
-        # db.session.commit()
-        #
-        # return {"msg": "user updated", "user": schema.dump(user)}
         pass
 
     def delete(self, user_id):
@@ -147,17 +134,7 @@ class UserList(Resource):
     method_decorators = [jwt_required()]
 
     def get(self):
-        # schema = UserSchema(many=True)
-        # query = User.query
-        # return paginate(query, schema)
         pass
 
     def post(self):
-        # schema = UserSchema()
-        # user = schema.load(request.json)
-        #
-        # db.session.add(user)
-        # db.session.commit()
-        #
-        # return {"msg": "user created", "user": schema.dump(user)}, 201
         pass
