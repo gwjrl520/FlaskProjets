@@ -6,7 +6,7 @@ initialized in application factory
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
-from app.commons.apispec import APISpecExt
+from commons.apispec import APISpecExt
 
 
 db = SQLAlchemy()
